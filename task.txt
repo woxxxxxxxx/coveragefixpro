@@ -1,0 +1,72 @@
+# CoverageFixPro UI修复 + SEO + Logo
+
+## Step 1：检查首页SEO
+查看 C:\Users\Administrator\coveragefixpro\index.html head部分
+确认是否有 og:title / og:description / canonical / JSON-LD
+缺什么补什么：
+
+<meta name="description" content="120+ free insurance calculators for auto, health, life, home and business insurance. Estimate premiums, coverage needs and savings instantly. No signup required.">
+<link rel="canonical" href="https://coveragefixpro.com/">
+<meta property="og:title" content="Insurance Calculators & Tools - Free Online | CoverageFixPro">
+<meta property="og:description" content="120+ free insurance calculators. Estimate auto, health, life, home and business insurance premiums instantly.">
+<meta property="og:url" content="https://coveragefixpro.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://coveragefixpro.com/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"CoverageFixPro","url":"https://coveragefixpro.com","description":"Free insurance calculators for auto, health, life, home and business insurance"}
+</script>
+
+## Step 2：修复Related Tools布局
+在 css/style.css 找related tools相关class，替换为：
+
+.related-tools {
+  margin: 32px 0;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+.related-tools h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1e293b;
+}
+.related-tools ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.related-tools ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.related-tools ul li::before {
+  content: "→";
+  color: #1d4ed8;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.related-tools ul li a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-size: 14px;
+}
+.related-tools ul li a:hover { text-decoration: underline; }
+
+## Step 3：制作SVG Logo并替换所有页面文字Logo
+
+创建 C:\Users\Administrator\coveragefixpro\logo.svg：
+
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="36" viewBox="0 0 200 36">
+  <rect x="0" y="4" width="28" height="28" rx="6" fill="#1d4ed8"/>
+  <text x="8" y="23" font-family="Arial" font-size="16" font-weight="900" fill="white">C</text>
+  <text x="34" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="#1d4ed8">CoverageFixPro</text>
+</svg>
+
+然后批量处理所有HTML文件：
+把 header里的 <a ...>CoverageFixPro</a> 文字Logo
+替换为 <a href="/" class="logo-link"><img src="/logo.svg" alt="CoverageFixPro" height="30" style="vertical-align:middle;display:block;">
