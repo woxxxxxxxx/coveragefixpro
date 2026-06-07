@@ -1,72 +1,38 @@
-# CoverageFixPro UI修复 + SEO + Logo
+# 修复Logo和Related Tools HTML结构
 
-## Step 1：检查首页SEO
-查看 C:\Users\Administrator\coveragefixpro\index.html head部分
-确认是否有 og:title / og:description / canonical / JSON-LD
-缺什么补什么：
+## Step 1：检查问题根源
+查看一个工具页比如 tools/health/aca-subsidy-calculator.html
+找到：
+1. header里Logo的HTML是什么
+2. Related Tools的HTML结构是什么（是dl/dt/dd还是div两列还是其他）
+把这两段HTML原样输出给我看
 
-<meta name="description" content="120+ free insurance calculators for auto, health, life, home and business insurance. Estimate premiums, coverage needs and savings instantly. No signup required.">
-<link rel="canonical" href="https://coveragefixpro.com/">
-<meta property="og:title" content="Insurance Calculators & Tools - Free Online | CoverageFixPro">
-<meta property="og:description" content="120+ free insurance calculators. Estimate auto, health, life, home and business insurance premiums instantly.">
-<meta property="og:url" content="https://coveragefixpro.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://coveragefixpro.com/og-image.png">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"CoverageFixPro","url":"https://coveragefixpro.com","description":"Free insurance calculators for auto, health, life, home and business insurance"}
-</script>
+## Step 2：修复Related Tools HTML结构
+Related Tools目前是两列布局（标题在左，列表在右），
+需要改成上下布局：标题在上，列表在下。
 
-## Step 2：修复Related Tools布局
-在 css/style.css 找related tools相关class，替换为：
+用脚本批量替换所有工具页的Related Tools HTML：
+把类似这种两列结构：
+<div class="related-tools">
+  <h3>Related ... Tools</h3>
+  <ul>...</ul>
+</div>
 
-.related-tools {
-  margin: 32px 0;
-  padding: 24px;
-  background: #f8fafc;
-  border-radius: 8px;
-}
-.related-tools h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #1e293b;
-}
-.related-tools ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.related-tools ul li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.related-tools ul li::before {
-  content: "→";
-  color: #1d4ed8;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-.related-tools ul li a {
-  color: #1d4ed8;
-  text-decoration: none;
-  font-size: 14px;
-}
-.related-tools ul li a:hover { text-decoration: underline; }
+如果是dl/dt/dd或其他结构，也统一改成：
+<div class="related-tools">
+  <h3>Related ... Tools</h3>
+  <ul>
+    （保留原有li内容）
+  </ul>
+</div>
 
-## Step 3：制作SVG Logo并替换所有页面文字Logo
+## Step 3：修复Logo
+检查logo.svg是否存在于 C:\Users\Administrator\coveragefixpro\logo.svg
+如果存在，检查HTML里img标签的src路径是否正确
+工具页用绝对路径 /logo.svg
+如果logo.svg不存在，重新创建
 
-创建 C:\Users\Administrator\coveragefixpro\logo.svg：
-
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="36" viewBox="0 0 200 36">
-  <rect x="0" y="4" width="28" height="28" rx="6" fill="#1d4ed8"/>
-  <text x="8" y="23" font-family="Arial" font-size="16" font-weight="900" fill="white">C</text>
-  <text x="34" y="25" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="#1d4ed8">CoverageFixPro</text>
-</svg>
-
-然后批量处理所有HTML文件：
-把 header里的 <a ...>CoverageFixPro</a> 文字Logo
-替换为 <a href="/" class="logo-link"><img src="/logo.svg" alt="CoverageFixPro" height="30" style="vertical-align:middle;display:block;">
+## Step 4：清楚报告
+输出：
+- tools/health/aca-subsidy-calculator.html 里Logo的完整HTML
+- Related Tools的完整HTML结构
