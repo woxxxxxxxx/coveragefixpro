@@ -1,17 +1,26 @@
-# 修复工具页About/FAQ/Related Tools UI样式
+# 首页：5个大卡片保留，下方加Tab+工具列表+分页
 
-## Step 1：查看当前CSS
-查看 C:\Users\Administrator\coveragefixpro\css\style.css
-输出当前关于 .about-section / .faq / .related-tools / .disclaimer 的所有样式
+## Step 1：查看index.html
+找到 Browse by Category 区域结束的位置（5个卡片之后）
+找到 Popular Tools 或 All Tools 区域的位置
 
-## Step 2：查看工具页HTML结构
-查看 tools/health/aca-subsidy-calculator.html 的完整body结构
-输出About区、FAQ区、Related Tools区、Disclaimer区的HTML class名称
+## Step 2：在5个大卡片区域之后、FAQ之前
+插入以下完整HTML块（如果already存在all-tools-section则先删除再插入）：
 
-## Step 3：在style.css补充完整样式
-根据实际class名，在style.css末尾追加完整样式块
+<section class="all-tools-section">
+  <h2>All Insurance Calculators</h2>
+  <div class="category-tabs">
+    <button class="tab-btn active" data-cat="all">All (120)</button>
+    <button class="tab-btn" data-cat="auto">🚗 Auto (25)</button>
+    <button class="tab-btn" data-cat="health">🏥 Health (25)</button>
+    <button class="tab-btn" data-cat="life">💼 Life (25)</button>
+    <button class="tab-btn" data-cat="home">🏠 Home (25)</button>
+    <button class="tab-btn" data-cat="business">🏢 Business (20)</button>
+  </div>
+  <div id="tools-grid" class="tools-grid"></div>
+  <div class="pagination" id="pagination"></div>
+</section>
 
-## Step 4：检查js/main.js是否有FAQ折叠功能
-如果没有，在main.js末尾追加FAQ toggle代码
+## Step 3：确认main.js里ALL_TOOLS数组和分页JS完整存在
 
-## Step 5：FTP上传
+## Step 4：FTP上传
