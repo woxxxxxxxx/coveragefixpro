@@ -3,6 +3,8 @@
   <!-- Core pages -->
   <url><loc>https://coveragefixpro.com/</loc><lastmod>2026-06-07</lastmod><priority>1.0</priority></url>
   <url><loc>https://coveragefixpro.com/about.html</loc><lastmod>2026-06-07</lastmod><priority>0.6</priority></url>
+  <url><loc>https://coveragefixpro.com/privacy-policy.html</loc><lastmod>2026-06-08</lastmod><priority>0.4</priority></url>
+  <url><loc>https://coveragefixpro.com/terms.html</loc><lastmod>2026-06-08</lastmod><priority>0.4</priority></url>
   <!-- Category index pages -->
   <url><loc>https://coveragefixpro.com/tools/auto/</loc><lastmod>2026-06-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://coveragefixpro.com/tools/health/</loc><lastmod>2026-06-07</lastmod><priority>0.8</priority></url>
