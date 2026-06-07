@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core pages -->
   <url><loc>https://coveragefixpro.com/</loc><lastmod>2026-06-07</lastmod><priority>1.0</priority></url>
   <url><loc>https://coveragefixpro.com/about.html</loc><lastmod>2026-06-07</lastmod><priority>0.6</priority></url>
+  <!-- Category index pages -->
   <url><loc>https://coveragefixpro.com/tools/auto/</loc><lastmod>2026-06-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://coveragefixpro.com/tools/health/</loc><lastmod>2026-06-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://coveragefixpro.com/tools/life/</loc><lastmod>2026-06-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://coveragefixpro.com/tools/home/</loc><lastmod>2026-06-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://coveragefixpro.com/tools/business/</loc><lastmod>2026-06-07</lastmod><priority>0.8</priority></url>
+  <!-- Auto Insurance Tools (25) -->
   <url><loc>https://coveragefixpro.com/tools/auto/car-insurance-premium-estimator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/auto/gap-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/auto/dui-insurance-rate-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
@@ -32,6 +35,7 @@
   <url><loc>https://coveragefixpro.com/tools/auto/insurance-score-estimator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/auto/coverage-gap-analyzer.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/auto/total-cost-of-ownership-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <!-- Health Insurance Tools (25) -->
   <url><loc>https://coveragefixpro.com/tools/health/aca-subsidy-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/health/hsa-contribution-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/health/cobra-cost-estimator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
@@ -57,4 +61,77 @@
   <url><loc>https://coveragefixpro.com/tools/health/catastrophic-plan-eligibility.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/health/health-insurance-penalty-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://coveragefixpro.com/tools/health/dependent-coverage-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <!-- Life Insurance Tools (25) -->
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-needs-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/term-vs-whole-life-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/death-benefit-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-for-mortgage.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/smoker-life-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-roi-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/income-replacement-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/cash-value-growth-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/policy-loan-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-affordability-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/joint-life-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/child-life-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/final-expense-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/group-vs-individual-life-insurance.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/beneficiary-needs-assessment.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/premium-financing-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/survivorship-life-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-conversion-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-settlement-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/estate-planning-life-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/disability-vs-life-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/return-of-premium-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-needs-by-age.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-medical-exam-waiver-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/life/life-insurance-tax-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <!-- Home Insurance Tools (25) -->
+  <url><loc>https://coveragefixpro.com/tools/home/home-insurance-estimator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/replacement-cost-estimator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/flood-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/bundling-home-auto-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/pmi-removal-date-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/landlord-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/renters-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/personal-property-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/home-insurance-deductible-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/umbrella-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/earthquake-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/hurricane-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/condo-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/water-damage-coverage-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/home-insurance-claims-impact-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/new-home-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/home-security-discount-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/insurance-to-value-ratio-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/home-warranty-vs-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/vacation-home-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/mobile-home-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/loss-of-use-coverage-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/liability-coverage-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/home-insurance-comparison-tool.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/home/wildfire-risk-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <!-- Business Insurance Tools (20) -->
+  <url><loc>https://coveragefixpro.com/tools/business/general-liability-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/workers-comp-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/business-interruption-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/cyber-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/professional-liability-eo-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/bop-business-owners-policy-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/commercial-property-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/commercial-auto-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/directors-officers-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/product-liability-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/employment-practices-liability-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/key-person-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/liquor-liability-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/contractor-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/commercial-umbrella-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/inland-marine-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/surety-bond-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/business-income-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/restaurant-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://coveragefixpro.com/tools/business/startup-insurance-calculator.html</loc><lastmod>2026-06-07</lastmod><priority>0.7</priority></url>
 </urlset>
