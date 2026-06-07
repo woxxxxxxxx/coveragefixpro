@@ -1,38 +1,17 @@
-# 修复Logo和Related Tools HTML结构
+# 修复工具页About/FAQ/Related Tools UI样式
 
-## Step 1：检查问题根源
-查看一个工具页比如 tools/health/aca-subsidy-calculator.html
-找到：
-1. header里Logo的HTML是什么
-2. Related Tools的HTML结构是什么（是dl/dt/dd还是div两列还是其他）
-把这两段HTML原样输出给我看
+## Step 1：查看当前CSS
+查看 C:\Users\Administrator\coveragefixpro\css\style.css
+输出当前关于 .about-section / .faq / .related-tools / .disclaimer 的所有样式
 
-## Step 2：修复Related Tools HTML结构
-Related Tools目前是两列布局（标题在左，列表在右），
-需要改成上下布局：标题在上，列表在下。
+## Step 2：查看工具页HTML结构
+查看 tools/health/aca-subsidy-calculator.html 的完整body结构
+输出About区、FAQ区、Related Tools区、Disclaimer区的HTML class名称
 
-用脚本批量替换所有工具页的Related Tools HTML：
-把类似这种两列结构：
-<div class="related-tools">
-  <h3>Related ... Tools</h3>
-  <ul>...</ul>
-</div>
+## Step 3：在style.css补充完整样式
+根据实际class名，在style.css末尾追加完整样式块
 
-如果是dl/dt/dd或其他结构，也统一改成：
-<div class="related-tools">
-  <h3>Related ... Tools</h3>
-  <ul>
-    （保留原有li内容）
-  </ul>
-</div>
+## Step 4：检查js/main.js是否有FAQ折叠功能
+如果没有，在main.js末尾追加FAQ toggle代码
 
-## Step 3：修复Logo
-检查logo.svg是否存在于 C:\Users\Administrator\coveragefixpro\logo.svg
-如果存在，检查HTML里img标签的src路径是否正确
-工具页用绝对路径 /logo.svg
-如果logo.svg不存在，重新创建
-
-## Step 4：清楚报告
-输出：
-- tools/health/aca-subsidy-calculator.html 里Logo的完整HTML
-- Related Tools的完整HTML结构
+## Step 5：FTP上传
