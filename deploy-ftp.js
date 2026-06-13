@@ -25,9 +25,8 @@ async function uploadDir(client, localDir, remoteDir) {
 
 async function deploy() {
   const client = new ftp.Client();
-  client.ftp.verbose = false;
+  client.ftp.verbose = true;
   try {
-    // HTTP CONNECT tunnel through local HTTP proxy (127.0.0.1:7897)
     const socket = await new Promise((resolve, reject) => {
       const s = net.createConnection({ host: '127.0.0.1', port: 7897 }, () => {
         s.write(`CONNECT 212.85.28.149:21 HTTP/1.1\r\nHost: 212.85.28.149:21\r\n\r\n`);
@@ -62,6 +61,15 @@ async function deploy() {
     console.error('Error:', e.message);
   }
   client.close();
+  runPostDeployCheck('coveragefixpro');
+}
+
+function runPostDeployCheck(siteName) {
+  const { spawn } = require('child_process');
+  const checkScript = 'C:\\Users\\Administrator\\pm-worker\\post-deploy-check.js';
+  console.log(`\n[Post-Deploy] Running check for ${siteName}...`);
+  const child = spawn('node', [checkScript, siteName], { stdio: 'inherit' });
+  child.on('error', e => console.error('[Post-Deploy] Check error:', e.message));
 }
 
 deploy();
