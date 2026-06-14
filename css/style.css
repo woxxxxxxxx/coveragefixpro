@@ -48,6 +48,7 @@ header {
 .logo-link {
   display: flex;
   align-items: center;
+  gap: 8px;
   text-decoration: none;
 }
 
@@ -160,6 +161,7 @@ section h2 { font-size: 1.5rem; margin-bottom: 20px; color: var(--text); }
 
 /* Ad placeholder */
 .ad-placeholder {
+  display: none;
   border: 2px dashed #cbd5e1;
   padding: 20px;
   text-align: center;
@@ -499,3 +501,100 @@ footer {
 .page-btn:hover { border-color: var(--primary); color: var(--primary); }
 .page-btn.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
 .page-btn.prev-next { width: auto; padding: 0 14px; font-size: 0.85rem; }
+
+/* ── 计算器输入区 ── */
+.calculator-box{background:#fff;border:1px solid #e0e7ff;border-radius:12px;padding:28px 32px;margin:24px 0;box-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04)}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:#475569;margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
+.form-group input,.form-group select{width:100%;padding:11px 14px;font-size:15px;font-family:inherit;border:1.5px solid #cbd5e1;border-radius:8px;outline:none;transition:border-color .2s,box-shadow .2s;background:#f8faff;color:#1e293b}
+.form-group input:focus,.form-group select:focus{border-color:#1d4ed8;box-shadow:0 0 0 3px rgba(29,78,216,.12);background:#fff}
+.calc-btn,button[onclick="calc()"]{width:100%;padding:13px;background:#1d4ed8;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;transition:background .2s;margin-top:8px;font-family:inherit}
+.calc-btn:hover,button[onclick="calc()"]:hover{background:#1e40af}
+
+/* ── 结果展示区 ── */
+.result-box{background:#fff;border:1px solid #e0e7ff;border-radius:12px;padding:24px 28px;margin:20px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.result-box h2{font-size:1rem;font-weight:700;color:#1e3a8a;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #e0e7ff}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f1f5f9;font-size:14px}
+.result-row:last-child{border-bottom:none}
+.result-row span{color:#475569}
+.result-row strong{color:#1d4ed8;font-size:15px;font-weight:700}
+
+/* ── info-box ── */
+.info-box{background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:20px 24px;margin:24px 0}
+.info-box h2{font-size:14px;font-weight:700;color:#1e3a8a;margin-bottom:8px}
+.info-box p{font-size:14px;color:#1e40af;line-height:1.7}
+
+/* ── FAQ ── */
+.faq-section{margin:32px 0}
+.faq-section h2{font-size:1.2rem;font-weight:700;color:#1e293b;margin-bottom:16px}
+.faq-item{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faq-item h3{font-size:14px;font-weight:700;color:#1e293b;padding:14px 18px;margin:0;background:#f8faff;cursor:pointer}
+.faq-item p{font-size:13px;color:#475569;padding:0 18px 14px;line-height:1.7;margin:0}
+
+/* ── about-section ── */
+.about-section{margin-top:32px;padding:24px;background:#f0f7ff;border-radius:10px;border:1px solid #dbeafe}
+.about-section h2{font-size:1rem;font-weight:700;color:#1e3a8a;margin-bottom:12px}
+.about-section p{font-size:14px;color:#334155;line-height:1.75;margin-bottom:10px}
+
+/* ── related-tools ── */
+.related-tools{margin:28px 0}
+.related-tools h2{font-size:1rem;font-weight:700;color:#1e293b;margin-bottom:12px}
+.related-tools ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.related-tools li a{display:inline-block;padding:7px 14px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;border-radius:6px;text-decoration:none;font-size:13px;font-weight:500;transition:all .15s}
+.related-tools li a:hover{background:#1d4ed8;color:#fff}
+
+/* ── disclaimer ── */
+.disclaimer{margin-top:24px;padding:14px 18px;background:#fefce8;border:1px solid #fde68a;border-radius:8px;font-size:12px;color:#92400e;line-height:1.6}
+
+/* ── 模板B：calculator-card + input-group ── */
+.tool-intro{font-size:16px;color:#64748b;line-height:1.6;margin-bottom:24px}
+.calculator-card{background:#fff;border:1px solid #e0e7ff;border-radius:12px;padding:28px 32px;margin:24px 0;box-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04)}
+.input-group{margin-bottom:18px}
+.input-group label{display:block;font-size:13px;font-weight:600;color:#475569;margin-bottom:6px}
+.input-group input,.input-group select{width:100%;padding:11px 14px;font-size:15px;font-family:inherit;border:1.5px solid #cbd5e1;border-radius:8px;outline:none;transition:border-color .2s,box-shadow .2s;background:#f8faff;color:#1e293b}
+.input-group input:focus,.input-group select:focus{border-color:#1d4ed8;box-shadow:0 0 0 3px rgba(29,78,216,.12);background:#fff}
+
+/* ── 模板B：result-grid / result-item ── */
+.result-grid{display:flex;flex-direction:column;gap:2px}
+.result-item{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #eef2f9}
+.result-item:last-child{border-bottom:none}
+.result-label{color:#475569;font-size:14px}
+.result-value{color:#1d4ed8;font-size:15px;font-weight:700;text-align:right}
+.result-note{margin-top:16px;padding:14px 16px;background:#eff6ff;border-radius:8px;font-size:13px;color:#1e40af;line-height:1.6}
+
+/* ── 模板B：explanation ── */
+.explanation{margin:32px 0}
+.explanation h2{font-size:1.2rem;font-weight:700;color:#1e293b;margin-bottom:12px}
+.explanation p{font-size:14px;color:#334155;line-height:1.75;margin-bottom:12px}
+.explanation ul{padding-left:22px;margin-bottom:12px}
+.explanation li{font-size:14px;color:#334155;line-height:1.8;margin-bottom:6px}
+
+/* ── 模板B：.faq（区别于 .faq-section）── */
+.faq{margin:32px 0}
+.faq h2{font-size:1.2rem;font-weight:700;color:#1e293b;margin-bottom:16px}
+.faq details{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faq details summary{padding:14px 18px;font-size:14px;font-weight:600;color:#1e293b;cursor:pointer;background:#f8faff;list-style:none;user-select:none}
+.faq details summary::-webkit-details-marker{display:none}
+.faq details summary::after{content:"▾";float:right;color:#1d4ed8}
+.faq details[open] summary::after{transform:rotate(180deg);display:inline-block}
+.faq details p{padding:14px 18px;font-size:13px;color:#475569;line-height:1.7;border-top:1px solid #e2e8f0;margin:0}
+
+/* ── 全局 input/select（非 radio/checkbox 容器兜底） ── */
+main input[type="number"],main input[type="text"],main input[type="date"],main select{width:100%;padding:11px 14px;font-size:15px;font-family:inherit;border:1.5px solid #cbd5e1;border-radius:8px;outline:none;background:#f8faff;color:#1e293b;transition:border-color .2s,box-shadow .2s;margin-top:4px}
+main input[type="number"]:focus,main input[type="text"]:focus,main input[type="date"]:focus,main select:focus{border-color:#1d4ed8;box-shadow:0 0 0 3px rgba(29,78,216,.12);background:#fff}
+
+/* ── radio/checkbox 修复：撤销 width:100% ── */
+input[type="radio"],input[type="checkbox"]{width:auto!important;margin:0;accent-color:#1d4ed8}
+
+/* coverage-gap-analyzer: .question-group + .radio-label */
+.question-group{margin-bottom:20px;padding:16px;background:#f8faff;border:1px solid #e0e7ff;border-radius:10px}
+.question-text{font-size:15px;color:#1e293b;margin-bottom:10px;line-height:1.5}
+.radio-label{display:inline-flex;align-items:center;gap:6px;margin-right:20px;font-size:15px;color:#334155;cursor:pointer;padding:4px 0}
+.radio-label:hover{color:#1d4ed8}
+
+/* water-damage / disability: .form-group 内 plain label:has(radio) */
+.form-group label:has(input[type="radio"]){display:inline-flex;align-items:center;gap:6px;margin-right:20px;font-size:15px;color:#334155;cursor:pointer;font-weight:normal}
+.form-group label:has(input[type="radio"]):hover{color:#1d4ed8}
+
+/* .label-hint 提示文字 */
+.label-hint{font-size:12px;color:#64748b;margin-top:4px;line-height:1.5}
