@@ -646,3 +646,14 @@ main details>p,main details>div{padding:14px 18px;font-size:13px;color:#475569;l
 .radio-label input[type="radio"],.question label input[type="radio"],
 .question-group label input[type="radio"],.quiz-question label input[type="radio"],
 .option input[type="radio"],.form-group:has(input[type="radio"]) label input[type="radio"]{width:18px;height:18px;accent-color:#1d4ed8;cursor:pointer;margin:0;flex-shrink:0}
+
+/* ── 说明区变体：.info-section（auto 13页）+ .description（health 25页）── */
+/* 与 .explanation 完全统一的卡片样式 */
+.info-section,.description{margin:32px 0;padding:24px 28px;background:#fff;border:1px solid #e0e7ff;border-radius:12px}
+.info-section h2,.description h2{font-size:1.15rem;font-weight:700;color:#1e293b;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.info-section h2::before,.description h2::before{content:'💡';font-size:1.1rem}
+.info-section p,.description p{font-size:14px;color:#334155;line-height:1.75;margin-bottom:14px}
+.info-section p:last-child,.description p:last-child{margin-bottom:0}
+.info-section ul,.description ul{list-style:none;padding:0;margin:16px 0;display:flex;flex-direction:column;gap:10px}
+.info-section li,.description li{padding:12px 16px 12px 18px;background:#f8faff;border-left:3px solid #1d4ed8;border-radius:0 8px 8px 0;font-size:14px;color:#334155;line-height:1.6}
+.info-section li strong,.description li strong{color:#1e3a8a}
