@@ -21,7 +21,7 @@ const CACHE_FILE  = path.join(__dirname, 'deploy-cache.json');
 
 const EXCLUDE = new Set([
   'node_modules', '.git', '.gitignore', 'deploy-ftp.js', 'deploy-cache.json',
-  'pinterest', 'coveragefixpro-upload.zip', 'upload-css.js', 'upload-specific.js',
+  'coveragefixpro-upload.zip', 'upload-css.js', 'upload-specific.js',
 ]);
 
 // ─── Cache ────────────────────────────────────────────────────────────────────

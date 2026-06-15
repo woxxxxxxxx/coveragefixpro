@@ -1,26 +1,25 @@
-# 首页：5个大卡片保留，下方加Tab+工具列表+分页
+Fix two issues in C:\Users\Administrator\coveragefixpro\
 
-## Step 1：查看index.html
-找到 Browse by Category 区域结束的位置（5个卡片之后）
-找到 Popular Tools 或 All Tools 区域的位置
+Issue 1: Breadcrumb alignment
+In css/style.css, find ALL breadcrumb-related styles and replace entirely with:
+.breadcrumb { display:flex; align-items:center; flex-wrap:wrap; gap:4px; padding:16px 20px; font-size:13px; background:#f8fafc; border-bottom:1px solid #e2e8f0; }
+.breadcrumb a { color:#1d4ed8; text-decoration:none; white-space:nowrap; }
+.breadcrumb a:hover { text-decoration:underline; }
+.breadcrumb .separator { color:#cbd5e1; }
+.breadcrumb .current { color:#64748b; white-space:nowrap; }
 
-## Step 2：在5个大卡片区域之后、FAQ之前
-插入以下完整HTML块（如果already存在all-tools-section则先删除再插入）：
+Issue 2: Create missing pages
+Create the following 2 files:
 
-<section class="all-tools-section">
-  <h2>All Insurance Calculators</h2>
-  <div class="category-tabs">
-    <button class="tab-btn active" data-cat="all">All (120)</button>
-    <button class="tab-btn" data-cat="auto">🚗 Auto (25)</button>
-    <button class="tab-btn" data-cat="health">🏥 Health (25)</button>
-    <button class="tab-btn" data-cat="life">💼 Life (25)</button>
-    <button class="tab-btn" data-cat="home">🏠 Home (25)</button>
-    <button class="tab-btn" data-cat="business">🏢 Business (20)</button>
-  </div>
-  <div id="tools-grid" class="tools-grid"></div>
-  <div class="pagination" id="pagination"></div>
-</section>
+privacy-policy.html - Full privacy policy page with header/footer, title "Privacy Policy - CoverageFixPro", content covering: data collection, cookies, third-party ads (Google AdSense), no personal data sold, contact info
 
-## Step 3：确认main.js里ALL_TOOLS数组和分页JS完整存在
+terms.html - Full terms of service page with header/footer, title "Terms of Service - CoverageFixPro", content covering: calculator estimates only, no professional advice, limitation of liability, intellectual property
 
-## Step 4：FTP上传
+Then in ALL 128 HTML files, find footer links and fix:
+- Privacy Policy link: href="/privacy-policy.html"  
+- Terms link: href="/terms.html"
+- About link: href="/about.html"
+
+Then update sitemap.xml to include privacy-policy.html and terms.html
+
+Then run node C:\Users\Administrator\coveragefixpro\deploy-ftp.js
