@@ -198,6 +198,7 @@
     <p>Results are estimates only. Consult a licensed insurance professional for actual quotes.</p>
   </div>
 </footer>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
 
 <script src="/js/main.js"></script>
 <script>
@@ -231,6 +232,8 @@ function calculate() {
   document.getElementById('rate_applied').textContent = (total_mult * 2.5).toFixed(2) + '% of car price';
   document.getElementById('result-box').style.display = 'block';
 }
+
+window.addEventListener('scroll',function(){var b=document.getElementById('btt');if(b)b.classList.toggle('show',window.scrollY>300);});
 </script>
 </body>
 </html>

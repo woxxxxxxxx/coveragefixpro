@@ -186,6 +186,7 @@
     <p>Results are estimates only. Consult a licensed insurance professional for actual quotes.</p>
   </div>
 </footer>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
 
 <script src="/js/main.js"></script>
 <script>
@@ -215,6 +216,8 @@ function calculate() {
     `The rideshare endorsement adds ${pct}% to your current premium. At ${hours} hours/week, this works out to approximately ${fmt(addon_monthly / (hours * 4.33))} per rideshare hour — a worthwhile cost to eliminate the coverage gap during Period 1.`;
   document.getElementById('result-box').style.display = 'block';
 }
+
+window.addEventListener('scroll',function(){var b=document.getElementById('btt');if(b)b.classList.toggle('show',window.scrollY>300);});
 </script>
 </body>
 </html>

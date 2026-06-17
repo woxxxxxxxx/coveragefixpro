@@ -117,6 +117,7 @@
     <p>For the most accurate results, have your current policy documents nearby when entering inputs. Compare the output with at least two or three actual quotes to see how well the estimate aligns with real-world pricing in your market. Estimates can vary significantly by state and insurer, so shopping around remains the single most effective way to reduce your health insurance costs.</p>
   </section>
 <footer><div class="footer-inner"><div class="footer-links"><a href="/about.html">About</a><a href="/about.html#privacy">Privacy Policy</a><a href="/about.html#terms">Terms</a></div><p>© 2026 CoverageFixPro. All rights reserved.</p><p>Results are estimates only. Consult a licensed insurance professional for actual quotes.</p></div></footer>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
 <script src="/js/main.js"></script>
 <style>
 .progress-bar-wrap{margin:20px 0;}
@@ -124,6 +125,10 @@
 .progress-bar-fill{height:100%;background:linear-gradient(90deg,#2ecc71,#27ae60);border-radius:8px;transition:width 0.4s;}
 .progress-labels{display:flex;justify-content:space-between;font-size:0.85rem;margin-top:4px;}
 .status-msg{margin-top:12px;padding:10px 14px;border-radius:6px;font-weight:600;}
+
+#btt{position:fixed;bottom:28px;right:24px;width:42px;height:42px;background:var(--primary,#0891b2);color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:all .2s;z-index:99}
+#btt.show{display:flex}
+#btt:hover{background:var(--primary-dark,#0e7490);transform:translateY(-2px)}
 </style>
 <script>
 function fmt(n){return '$'+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');}
@@ -146,6 +151,8 @@ function calculate(){
   else{msg.style.background='#f8f9fa';msg.style.color='#495057';msg.textContent='You have '+fmt(remaining)+' remaining before your deductible is met.';}
   document.getElementById('results').style.display='block';
 }
+
+window.addEventListener('scroll',function(){var b=document.getElementById('btt');if(b)b.classList.toggle('show',window.scrollY>300);});
 </script>
 </body>
 </html>
