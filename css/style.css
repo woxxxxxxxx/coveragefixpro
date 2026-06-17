@@ -675,3 +675,7 @@ main details>p,main details>div{padding:14px 18px;font-size:13px;color:#475569;l
 .description table tr:last-child td,.about-section table tr:last-child td{border-bottom:none}
 .explanation table tr:nth-child(even) td,.info-section table tr:nth-child(even) td,
 .description table tr:nth-child(even) td,.about-section table tr:nth-child(even) td{background:#f8faff}
+
+#btt{position:fixed;bottom:28px;right:24px;width:42px;height:42px;background:var(--primary,#0891b2);color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:all .2s;z-index:99}
+#btt.show{display:flex}
+#btt:hover{background:var(--primary-dark,#0e7490);transform:translateY(-2px)}
