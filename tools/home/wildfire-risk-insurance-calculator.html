@@ -71,11 +71,11 @@
     <div class="form-group">
       <label for="state">State</label>
       <select id="state" oninput="calc()">
-        <option value="CA">CA — California</option>
-        <option value="OR">OR — Oregon</option>
-        <option value="WA">WA — Washington</option>
-        <option value="CO">CO — Colorado</option>
-        <option value="AZ">AZ — Arizona</option>
+        <option value="CA">CA &mdash; California</option>
+        <option value="OR">OR &mdash; Oregon</option>
+        <option value="WA">WA &mdash; Washington</option>
+        <option value="CO">CO &mdash; Colorado</option>
+        <option value="AZ">AZ &mdash; Arizona</option>
         <option value="Other" selected>Other</option>
       </select>
     </div>
@@ -86,9 +86,9 @@
     <div class="form-group">
       <label for="fire_zone">Fire Hazard Severity Zone</label>
       <select id="fire_zone" oninput="calc()">
-        <option value="high">High — Wildland Urban Interface (WUI)</option>
-        <option value="moderate" selected>Moderate — Near Wildland Areas</option>
-        <option value="low">Low — Urban / Suburban</option>
+        <option value="high">High &mdash; Wildland Urban Interface (WUI)</option>
+        <option value="moderate" selected>Moderate &mdash; Near Wildland Areas</option>
+        <option value="low">Low &mdash; Urban / Suburban</option>
       </select>
     </div>
   </div>
@@ -117,7 +117,7 @@
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h3>Does standard homeowners insurance cover wildfire?</h3>
-      <p>Yes — standard homeowners policies cover wildfire damage as a covered peril. However, in high-risk areas, many insurers are declining to write or renew policies, leaving homeowners to seek specialty coverage.</p>
+      <p>Yes &mdash; standard homeowners policies cover wildfire damage as a covered peril. However, in high-risk areas, many insurers are declining to write or renew policies, leaving homeowners to seek specialty coverage.</p>
     </div>
     <div class="faq-item">
       <h3>What is the California FAIR Plan?</h3>
@@ -142,7 +142,7 @@
     <h2>About This Wildfire Risk Home Insurance Calculator</h2>
     <p>The <strong>Wildfire Risk Home Insurance Calculator</strong> helps you make smarter insurance decisions by turning complex coverage variables into clear, actionable numbers. Simply enter your details above and the calculator instantly shows you realistic estimates based on the key factors that insurers use to determine your costs.</p>
     <p>Insurance professionals, financial planners, and consumers alike use home insurance calculators to benchmark costs, identify savings opportunities, and make informed coverage decisions. Rather than relying on guesswork or generic industry averages, this calculator applies the specific inputs you provide to generate a range that reflects your situation.</p>
-    <p>When interpreting results, keep in mind that actual home insurance premiums depend on many additional factors — including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
+    <p>When interpreting results, keep in mind that actual home insurance premiums depend on many additional factors &mdash; including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
     <p>For the most accurate results, have your current policy documents nearby when entering inputs. Compare the output with at least two or three actual quotes to see how well the estimate aligns with real-world pricing in your market. Estimates can vary significantly by state and insurer, so shopping around remains the single most effective way to reduce your home insurance costs.</p>
   </section>
 <section class="related-tools">
@@ -164,17 +164,17 @@
   <div class="tool-info-card">
     <h2 class="tool-info-title">How to Use This Calculator</h2>
     <ol class="tool-steps">
-      <li><strong>Enter your details</strong> 鈥?Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
-      <li><strong>Review your results</strong> 鈥?Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
-      <li><strong>Compare and take action</strong> 鈥?Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
+      <li><strong>Enter your details</strong> &mdash; Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
+      <li><strong>Review your results</strong> &mdash; Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
+      <li><strong>Compare and take action</strong> &mdash; Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
     </ol>
   </div>
   <div class="tool-info-card">
     <h2 class="tool-info-title">Common Use Cases</h2>
     <ul class="tool-use-cases">
-      <li><strong>Shopping for a new policy</strong> 鈥?Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
-      <li><strong>Reviewing coverage at renewal</strong> 鈥?Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
-      <li><strong>Financial planning and budgeting</strong> 鈥?Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
+      <li><strong>Shopping for a new policy</strong> &mdash; Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
+      <li><strong>Reviewing coverage at renewal</strong> &mdash; Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
+      <li><strong>Financial planning and budgeting</strong> &mdash; Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
     </ul>
   </div>
 </div>
@@ -194,7 +194,7 @@ function calc(){
   var zm={high:2.5,moderate:1.5,low:1.0}[zone];
   var base=hv*0.005;
   var annual=base*sm*zm;
-  var risk=zone==='high'&&state==='CA'?'Very High — Some insurers may decline coverage':zone==='high'?'High':zone==='moderate'?'Moderate':'Low';
+  var risk=zone==='high'&&state==='CA'?'Very High &mdash; Some insurers may decline coverage':zone==='high'?'High':zone==='moderate'?'Moderate':'Low';
   var tips=['Clear 100-foot defensible space around home','Use fire-resistant roofing and siding','Install ember-resistant vents','Create a home inventory for claims purposes'];
   document.getElementById('res_annual').textContent=fmt(annual);
   document.getElementById('res_monthly').textContent=fmt(annual/12);

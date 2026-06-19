@@ -130,7 +130,7 @@
   <section class="info-section">
     <h2>The 10% Rule Explained</h2>
     <p>A widely used rule of thumb: if your annual full coverage premium exceeds 10% of your car's market value, it may not be worth buying. At that point, the amount you'd receive in a total-loss claim (after your deductible) may barely cover a year or two of premium payments.</p>
-    <p>This calculator also checks whether your car's value is less than twice your deductible — another signal that full coverage may not make financial sense, since your net payout on a total loss would be minimal.</p>
+    <p>This calculator also checks whether your car's value is less than twice your deductible &mdash; another signal that full coverage may not make financial sense, since your net payout on a total loss would be minimal.</p>
   </section>
 
   <section class="faq-section">
@@ -162,7 +162,7 @@
     <h2>About This Full Coverage vs Liability Only Calculator</h2>
     <p>The <strong>Full Coverage vs Liability Only Calculator</strong> helps you make smarter insurance decisions by turning complex coverage variables into clear, actionable numbers. Simply enter your details above and the calculator instantly shows you realistic estimates based on the key factors that insurers use to determine your costs.</p>
     <p>Insurance professionals, financial planners, and consumers alike use auto insurance calculators to benchmark costs, identify savings opportunities, and make informed coverage decisions. Rather than relying on guesswork or generic industry averages, this calculator applies the specific inputs you provide to generate a range that reflects your situation.</p>
-    <p>When interpreting results, keep in mind that actual auto insurance premiums depend on many additional factors — including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
+    <p>When interpreting results, keep in mind that actual auto insurance premiums depend on many additional factors &mdash; including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
     <p>For the most accurate results, have your current policy documents nearby when entering inputs. Compare the output with at least two or three actual quotes to see how well the estimate aligns with real-world pricing in your market. Estimates can vary significantly by state and insurer, so shopping around remains the single most effective way to reduce your auto insurance costs.</p>
   </section>
 <section class="related-tools">
@@ -184,17 +184,17 @@
   <div class="tool-info-card">
     <h2 class="tool-info-title">How to Use This Calculator</h2>
     <ol class="tool-steps">
-      <li><strong>Enter your details</strong> 鈥?Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
-      <li><strong>Review your results</strong> 鈥?Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
-      <li><strong>Compare and take action</strong> 鈥?Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
+      <li><strong>Enter your details</strong> &mdash; Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
+      <li><strong>Review your results</strong> &mdash; Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
+      <li><strong>Compare and take action</strong> &mdash; Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
     </ol>
   </div>
   <div class="tool-info-card">
     <h2 class="tool-info-title">Common Use Cases</h2>
     <ul class="tool-use-cases">
-      <li><strong>Shopping for a new policy</strong> 鈥?Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
-      <li><strong>Reviewing coverage at renewal</strong> 鈥?Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
-      <li><strong>Financial planning and budgeting</strong> 鈥?Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
+      <li><strong>Shopping for a new policy</strong> &mdash; Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
+      <li><strong>Reviewing coverage at renewal</strong> &mdash; Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
+      <li><strong>Financial planning and budgeting</strong> &mdash; Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
     </ul>
   </div>
 </div>
@@ -247,13 +247,13 @@ function calculateCoverage() {
   }
   if (pct > 10) {
     recommend = 'liability';
-    reasons.push('Your full coverage premium is ' + pct.toFixed(1) + '% of your car\'s value — exceeding the 10% rule of thumb threshold.');
+    reasons.push('Your full coverage premium is ' + pct.toFixed(1) + '% of your car\'s value &mdash; exceeding the 10% rule of thumb threshold.');
   }
 
   if (recommend === 'liability') {
     rec.innerHTML = '<p class="rec-no"><strong>Consider Liability-Only Coverage.</strong> ' + reasons.join(' ') + ' Dropping to liability-only would save you approximately ' + fmt(annualSavings) + ' per year.</p>';
   } else {
-    rec.innerHTML = '<p class="rec-yes"><strong>Full Coverage Appears Worthwhile.</strong> Your premium is ' + pct.toFixed(1) + '% of your car\'s value — within the 10% guideline. The break-even point is ' + (breakEven ? breakEven.toFixed(1) + ' years' : 'N/A') + '. If you plan to keep the car longer than this, full coverage is likely a good investment.</p>';
+    rec.innerHTML = '<p class="rec-yes"><strong>Full Coverage Appears Worthwhile.</strong> Your premium is ' + pct.toFixed(1) + '% of your car\'s value &mdash; within the 10% guideline. The break-even point is ' + (breakEven ? breakEven.toFixed(1) + ' years' : 'N/A') + '. If you plan to keep the car longer than this, full coverage is likely a good investment.</p>';
   }
 
   document.getElementById('result-box').style.display = 'block';

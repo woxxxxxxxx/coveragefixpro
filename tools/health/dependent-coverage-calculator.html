@@ -78,7 +78,7 @@
       <tr><th>Coverage Tier</th><th>Monthly Premium</th><th>Annual Premium</th><th>Marginal Cost vs Employee Only</th></tr>
     </thead>
     <tbody>
-      <tr><td>Employee Only</td><td id="m_ee"></td><td id="a_ee"></td><td>—</td></tr>
+      <tr><td>Employee Only</td><td id="m_ee"></td><td id="a_ee"></td><td>&mdash; </td></tr>
       <tr><td>Employee + Spouse</td><td id="m_sp"></td><td id="a_sp"></td><td id="marg_sp"></td></tr>
       <tr><td>Employee + Child(ren)</td><td id="m_ch"></td><td id="a_ch"></td><td id="marg_ch"></td></tr>
       <tr><td>Family</td><td id="m_fam"></td><td id="a_fam"></td><td id="marg_fam"></td></tr>
@@ -101,7 +101,7 @@
   <details><summary>Is it better for spouses to have separate plans?</summary><p>It depends. If both spouses have employer coverage available, compare the total cost of family coverage on one plan versus each having individual coverage on their own employer's plan. The cheaper option varies by employer contribution levels.</p></details>
   <details><summary>Do children stay covered until age 26 regardless of student status?</summary><p>Yes. The ACA requires health plans that cover dependents to allow adult children to stay on a parent's plan until age 26, regardless of student status, marital status, or whether they live with the parent.</p></details>
   <details><summary>What is a spousal surcharge?</summary><p>Some employers charge an additional premium (surcharge) if you add a spouse who has access to their own employer's health coverage. This surcharge can range from $50 to $200+ per month and should be factored into your comparison.</p></details>
-  <details><summary>Can I add a dependent outside of Open Enrollment?</summary><p>Yes. Birth, adoption, marriage, and loss of other coverage are qualifying life events that trigger a Special Enrollment Period, allowing you to add dependents within 30–60 days of the event.</p></details>
+  <details><summary>Can I add a dependent outside of Open Enrollment?</summary><p>Yes. Birth, adoption, marriage, and loss of other coverage are qualifying life events that trigger a Special Enrollment Period, allowing you to add dependents within 30-60 days of the event.</p></details>
 </div>
 <div class="related-tools">
   <h2>Related Health Insurance Tools</h2>
@@ -119,17 +119,17 @@
   <div class="tool-info-card">
     <h2 class="tool-info-title">How to Use This Calculator</h2>
     <ol class="tool-steps">
-      <li><strong>Enter your details</strong> 鈥?Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
-      <li><strong>Review your results</strong> 鈥?Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
-      <li><strong>Compare and take action</strong> 鈥?Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
+      <li><strong>Enter your details</strong> &mdash; Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
+      <li><strong>Review your results</strong> &mdash; Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
+      <li><strong>Compare and take action</strong> &mdash; Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
     </ol>
   </div>
   <div class="tool-info-card">
     <h2 class="tool-info-title">Common Use Cases</h2>
     <ul class="tool-use-cases">
-      <li><strong>Shopping for a new policy</strong> 鈥?Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
-      <li><strong>Reviewing coverage at renewal</strong> 鈥?Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
-      <li><strong>Financial planning and budgeting</strong> 鈥?Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
+      <li><strong>Shopping for a new policy</strong> &mdash; Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
+      <li><strong>Reviewing coverage at renewal</strong> &mdash; Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
+      <li><strong>Financial planning and budgeting</strong> &mdash; Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
     </ul>
   </div>
 </div>
@@ -139,7 +139,7 @@
     <h2>About This Dependent Health Insurance Coverage Cost Calculator</h2>
     <p>The <strong>Dependent Health Insurance Coverage Cost Calculator</strong> helps you make smarter insurance decisions by turning complex coverage variables into clear, actionable numbers. Simply enter your details above and the calculator instantly shows you realistic estimates based on the key factors that insurers use to determine your costs.</p>
     <p>Insurance professionals, financial planners, and consumers alike use health insurance calculators to benchmark costs, identify savings opportunities, and make informed coverage decisions. Rather than relying on guesswork or generic industry averages, this calculator applies the specific inputs you provide to generate a range that reflects your situation.</p>
-    <p>When interpreting results, keep in mind that actual health insurance premiums depend on many additional factors — including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
+    <p>When interpreting results, keep in mind that actual health insurance premiums depend on many additional factors &mdash; including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
     <p>For the most accurate results, have your current policy documents nearby when entering inputs. Compare the output with at least two or three actual quotes to see how well the estimate aligns with real-world pricing in your market. Estimates can vary significantly by state and insurer, so shopping around remains the single most effective way to reduce your health insurance costs.</p>
   </section>
 <footer><div class="footer-inner"><div class="footer-links"><a href="/about.html">About</a><a href="/about.html#privacy">Privacy Policy</a><a href="/about.html#terms">Terms</a></div><p>© 2026 CoverageFixPro. All rights reserved.</p><p>Results are estimates only. Consult a licensed insurance professional for actual quotes.</p></div></footer>
@@ -165,15 +165,15 @@ function calculate(){
   if(!ee){document.getElementById('results').style.display='none';return;}
   document.getElementById('m_ee').textContent=fmt(ee);
   document.getElementById('a_ee').textContent=fmt(ee*12);
-  document.getElementById('m_sp').textContent=sp?fmt(sp):'—';
-  document.getElementById('a_sp').textContent=sp?fmt(sp*12):'—';
-  document.getElementById('marg_sp').textContent=sp?fmt(sp-ee)+'/mo':'—';
-  document.getElementById('m_ch').textContent=ch?fmt(ch):'—';
-  document.getElementById('a_ch').textContent=ch?fmt(ch*12):'—';
-  document.getElementById('marg_ch').textContent=ch?fmt(ch-ee)+'/mo':'—';
-  document.getElementById('m_fam').textContent=fam?fmt(fam):'—';
-  document.getElementById('a_fam').textContent=fam?fmt(fam*12):'—';
-  document.getElementById('marg_fam').textContent=fam?fmt(fam-ee)+'/mo':'—';
+  document.getElementById('m_sp').textContent=sp?fmt(sp):'&mdash; ';
+  document.getElementById('a_sp').textContent=sp?fmt(sp*12):'&mdash; ';
+  document.getElementById('marg_sp').textContent=sp?fmt(sp-ee)+'/mo':'&mdash; ';
+  document.getElementById('m_ch').textContent=ch?fmt(ch):'&mdash; ';
+  document.getElementById('a_ch').textContent=ch?fmt(ch*12):'&mdash; ';
+  document.getElementById('marg_ch').textContent=ch?fmt(ch-ee)+'/mo':'&mdash; ';
+  document.getElementById('m_fam').textContent=fam?fmt(fam):'&mdash; ';
+  document.getElementById('a_fam').textContent=fam?fmt(fam*12):'&mdash; ';
+  document.getElementById('marg_fam').textContent=fam?fmt(fam-ee)+'/mo':'&mdash; ';
   document.getElementById('spouse_cost').textContent=sp?fmt(sp-ee)+'/month':'Enter spouse premium';
   document.getElementById('child_cost').textContent=ch?fmt(ch-ee)+'/month':'Enter child premium';
   const both_separate=sp&&ch?(sp-ee)+(ch-ee):null;

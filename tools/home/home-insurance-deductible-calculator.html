@@ -75,9 +75,9 @@
     <div class="form-group">
       <label for="claim_frequency">Expected Claim Frequency</label>
       <select id="claim_frequency" oninput="calc()">
-        <option value="low">Low — 1 Claim per 20 Years</option>
-        <option value="medium" selected>Medium — 1 Claim per 10 Years</option>
-        <option value="high">High — 1 Claim per 5 Years</option>
+        <option value="low">Low &mdash; 1 Claim per 20 Years</option>
+        <option value="medium" selected>Medium &mdash; 1 Claim per 10 Years</option>
+        <option value="high">High &mdash; 1 Claim per 5 Years</option>
       </select>
     </div>
   </div>
@@ -101,11 +101,11 @@
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h3>How much does raising my deductible save?</h3>
-      <p>Increasing your deductible from $500 to $1,000 typically saves 5–10%. Going to $2,500 can save 15–20%, and $5,000 may save up to 25–30% depending on your insurer and location.</p>
+      <p>Increasing your deductible from $500 to $1,000 typically saves 5-10%. Going to $2,500 can save 15-20%, and $5,000 may save up to 25-30% depending on your insurer and location.</p>
     </div>
     <div class="faq-item">
       <h3>What is a percentage deductible?</h3>
-      <p>Some policies — especially in hurricane or earthquake zones — have percentage deductibles (e.g., 2% of home value) rather than flat dollar amounts. On a $400,000 home, a 2% deductible means $8,000 out of pocket.</p>
+      <p>Some policies &mdash; especially in hurricane or earthquake zones &mdash; have percentage deductibles (e.g., 2% of home value) rather than flat dollar amounts. On a $400,000 home, a 2% deductible means $8,000 out of pocket.</p>
     </div>
     <div class="faq-item">
       <h3>Should I file a claim for small losses?</h3>
@@ -117,7 +117,7 @@
     </div>
     <div class="faq-item">
       <h3>Should I keep my deductible savings in a separate fund?</h3>
-      <p>Yes — this is a best practice. If you choose a high deductible for premium savings, set aside the difference in an emergency fund specifically to cover that deductible if a claim arises.</p>
+      <p>Yes &mdash; this is a best practice. If you choose a high deductible for premium savings, set aside the difference in an emergency fund specifically to cover that deductible if a claim arises.</p>
     </div>
   </section>
 
@@ -126,7 +126,7 @@
     <h2>About This Home Insurance Deductible Optimizer</h2>
     <p>The <strong>Home Insurance Deductible Optimizer</strong> helps you make smarter insurance decisions by turning complex coverage variables into clear, actionable numbers. Simply enter your details above and the calculator instantly shows you realistic estimates based on the key factors that insurers use to determine your costs.</p>
     <p>Insurance professionals, financial planners, and consumers alike use home insurance calculators to benchmark costs, identify savings opportunities, and make informed coverage decisions. Rather than relying on guesswork or generic industry averages, this calculator applies the specific inputs you provide to generate a range that reflects your situation.</p>
-    <p>When interpreting results, keep in mind that actual home insurance premiums depend on many additional factors — including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
+    <p>When interpreting results, keep in mind that actual home insurance premiums depend on many additional factors &mdash; including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
     <p>For the most accurate results, have your current policy documents nearby when entering inputs. Compare the output with at least two or three actual quotes to see how well the estimate aligns with real-world pricing in your market. Estimates can vary significantly by state and insurer, so shopping around remains the single most effective way to reduce your home insurance costs.</p>
   </section>
 <section class="related-tools">
@@ -148,17 +148,17 @@
   <div class="tool-info-card">
     <h2 class="tool-info-title">How to Use This Calculator</h2>
     <ol class="tool-steps">
-      <li><strong>Enter your details</strong> 鈥?Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
-      <li><strong>Review your results</strong> 鈥?Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
-      <li><strong>Compare and take action</strong> 鈥?Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
+      <li><strong>Enter your details</strong> &mdash; Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
+      <li><strong>Review your results</strong> &mdash; Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
+      <li><strong>Compare and take action</strong> &mdash; Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
     </ol>
   </div>
   <div class="tool-info-card">
     <h2 class="tool-info-title">Common Use Cases</h2>
     <ul class="tool-use-cases">
-      <li><strong>Shopping for a new policy</strong> 鈥?Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
-      <li><strong>Reviewing coverage at renewal</strong> 鈥?Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
-      <li><strong>Financial planning and budgeting</strong> 鈥?Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
+      <li><strong>Shopping for a new policy</strong> &mdash; Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
+      <li><strong>Reviewing coverage at renewal</strong> &mdash; Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
+      <li><strong>Financial planning and budgeting</strong> &mdash; Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
     </ul>
   </div>
 </div>
@@ -186,7 +186,7 @@ function calc(){
   deductibles.forEach(function(d){
     var prem=base*mults[d];
     var expected=prem+d*prob;
-    rows+='<tr style="background:'+(d===bestDed?'#dbeafe':'')+'"><td style="padding:8px;">$'+d.toLocaleString()+'</td><td style="padding:8px;text-align:right;">'+fmt(prem)+'</td><td style="padding:8px;text-align:right;">'+fmt(expected)+'</td><td style="padding:8px;text-align:center;">'+(d===bestDed?'⭐ Best':'—')+'</td></tr>';
+    rows+='<tr style="background:'+(d===bestDed?'#dbeafe':'')+'"><td style="padding:8px;">$'+d.toLocaleString()+'</td><td style="padding:8px;text-align:right;">'+fmt(prem)+'</td><td style="padding:8px;text-align:right;">'+fmt(expected)+'</td><td style="padding:8px;text-align:center;">'+(d===bestDed?'⭐ Best':'&mdash; ')+'</td></tr>';
   });
   document.getElementById('res_table').innerHTML='<table style="width:100%;border-collapse:collapse;font-size:0.9rem;"><thead><tr style="background:var(--primary);color:#fff;"><th style="padding:8px;">Deductible</th><th style="padding:8px;">Annual Premium</th><th style="padding:8px;">Expected Annual Cost</th><th style="padding:8px;">Recommendation</th></tr></thead><tbody>'+rows+'</tbody></table>';
   document.getElementById('res_best').textContent='$'+bestDed.toLocaleString()+' deductible';
