@@ -584,7 +584,11 @@
 
 <script src="/js/main.js"></script>
 <script>
-document.addEventListener('scroll',function(){var b=document.getElementById('btt');if(b)b.classList.toggle('show',(window.scrollY||document.documentElement.scrollTop)>100);},true);
+var bttBtn=document.getElementById('btt');
+if(bttBtn){
+  window.addEventListener('scroll',function(){bttBtn.classList.toggle('show',(window.scrollY||document.documentElement.scrollTop)>100);});
+  bttBtn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();window.scrollTo({top:0,behavior:'smooth'});});
+}
 </script>
 </body>
 </html>
