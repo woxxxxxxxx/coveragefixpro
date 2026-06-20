@@ -580,15 +580,29 @@
     <p>Results are estimates only. Consult a licensed insurance professional for actual quotes.</p>
   </div>
 </footer>
-<button id="btt" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&uarr;</button>
-
 <script src="/js/main.js"></script>
 <script>
-var bttBtn=document.getElementById('btt');
-if(bttBtn){
-  window.addEventListener('scroll',function(){bttBtn.classList.toggle('show',(window.scrollY||document.documentElement.scrollTop)>100);});
-  bttBtn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();window.scrollTo({top:0,behavior:'smooth'});});
-}
+(function(){
+  var btn = document.createElement('button');
+  btn.id = 'btt2';
+  btn.innerHTML = '&#8679;';
+  btn.title = 'Back to top';
+  btn.style.cssText = 'position:fixed;bottom:28px;right:24px;width:48px;height:48px;background:#1d4ed8;color:#fff;border:none;border-radius:50%;font-size:22px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.2);z-index:9999;transition:opacity .3s;opacity:0;';
+  document.body.appendChild(btn);
+  btn.addEventListener('click', function(){
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  });
+  window.addEventListener('scroll', function(){
+    if((window.pageYOffset || document.documentElement.scrollTop) > 200){
+      btn.style.display = 'flex';
+      setTimeout(function(){ btn.style.opacity = '1'; }, 10);
+    } else {
+      btn.style.opacity = '0';
+      setTimeout(function(){ btn.style.display = 'none'; }, 300);
+    }
+  });
+})();
 </script>
 </body>
 </html>
