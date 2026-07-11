@@ -22,8 +22,43 @@ const CACHE_FILE  = path.join(__dirname, 'deploy-cache.json');
 const EXCLUDE = new Set([
   'node_modules', '.git', '.gitignore', 'deploy-ftp.js', 'deploy-cache.json',
   'coveragefixpro-upload.zip', 'upload-css.js', 'upload-specific.js',
-  'AGENTS.md', 'CLAUDE.md',
+  'AGENTS.md', 'CLAUDE.md', 'package.json', 'package-lock.json',
+  'pinterest',
+  'audit.js', 'auto_faq_audit.js', 'auto-faq-audit.txt', 'class_audit.js', 'class-audit.txt',
+  'coverage-audit-report.txt', 'explanation_audit.js', 'explanation-audit.txt',
+  'form_audit.js', 'form-audit.txt', 'logo_audit.js', 'logo-audit.txt', 'logo_detail.js',
+  'radio_audit.js', 'radio-template-audit.txt', 'table_audit.js', 'table-audit.txt',
+  'verify2.js', 'verify3.js', 'verify_urls.js',
+  'fix_css_version.js', 'fix_css_version_b.js', 'fix_css_version_c.js', 'fix_css_version_d.js',
+  'fix_css_version_e.js', 'fix_css_version_f.js', 'fix_css_version_g.js', 'fix_emoji_urls.js',
+  'fix_favicon.py', 'fix_footer_links.js', 'fix_icons_desc.js', 'fix_index.js', 'fix_index2.js',
+  'fix_index_emoji.js', 'fix_logo.py', 'fix_logo_height.py', 'fix_logo_img.py', 'fix_logo_pages.js',
+  'fix_orphan_toolcards.py', 'fix_related.py', 'fix_remaining.js', 'fix_sitemap.js', 'fix_urls.js',
+  'ftp_deploy.py', 'ftp_upload.py', 'upload_all_html.py', 'upload_key_files.py',
+  'deploy-curl.sh', 'restore_emoji.py', 'task.txt', 'component-class-map.txt',
 ]);
+
+const REMOTE_CLEANUP_FILES = [
+  '/public_html/AGENTS.md', '/public_html/CLAUDE.md', '/public_html/package.json', '/public_html/package-lock.json',
+  '/public_html/deploy-cache.json', '/public_html/audit.js', '/public_html/auto_faq_audit.js', '/public_html/auto-faq-audit.txt',
+  '/public_html/class_audit.js', '/public_html/class-audit.txt', '/public_html/coverage-audit-report.txt',
+  '/public_html/explanation_audit.js', '/public_html/explanation-audit.txt', '/public_html/form_audit.js', '/public_html/form-audit.txt',
+  '/public_html/logo_audit.js', '/public_html/logo-audit.txt', '/public_html/logo_detail.js', '/public_html/radio_audit.js',
+  '/public_html/radio-template-audit.txt', '/public_html/table_audit.js', '/public_html/table-audit.txt',
+  '/public_html/verify2.js', '/public_html/verify3.js', '/public_html/verify_urls.js',
+  '/public_html/fix_css_version.js', '/public_html/fix_css_version_b.js', '/public_html/fix_css_version_c.js',
+  '/public_html/fix_css_version_d.js', '/public_html/fix_css_version_e.js', '/public_html/fix_css_version_f.js',
+  '/public_html/fix_css_version_g.js', '/public_html/fix_emoji_urls.js', '/public_html/fix_favicon.py',
+  '/public_html/fix_footer_links.js', '/public_html/fix_icons_desc.js', '/public_html/fix_index.js',
+  '/public_html/fix_index2.js', '/public_html/fix_index_emoji.js', '/public_html/fix_logo.py',
+  '/public_html/fix_logo_height.py', '/public_html/fix_logo_img.py', '/public_html/fix_logo_pages.js',
+  '/public_html/fix_orphan_toolcards.py', '/public_html/fix_related.py', '/public_html/fix_remaining.js',
+  '/public_html/fix_sitemap.js', '/public_html/fix_urls.js', '/public_html/ftp_deploy.py', '/public_html/ftp_upload.py',
+  '/public_html/upload_all_html.py', '/public_html/upload_key_files.py', '/public_html/deploy-curl.sh',
+  '/public_html/restore_emoji.py', '/public_html/task.txt', '/public_html/component-class-map.txt',
+  '/public_html/pinterest/pin-content.json',
+];
+const REMOTE_CLEANUP_DIRS = ['/public_html/pinterest'];
 
 // ─── Cache ────────────────────────────────────────────────────────────────────
 function loadCache() {
@@ -127,6 +162,27 @@ async function ensureRemoteDirs(client, files) {
   }
 }
 
+async function cleanupRemoteFiles(cache) {
+  const client = await createClient();
+  try {
+    for (const remotePath of REMOTE_CLEANUP_FILES) {
+      try {
+        await client.remove(remotePath);
+        delete cache.files[remotePath];
+        console.log(`  cleanup removed ${remotePath}`);
+      } catch (_) {}
+    }
+    for (const remoteDir of REMOTE_CLEANUP_DIRS) {
+      try {
+        await client.removeDir(remoteDir);
+        console.log(`  cleanup removed dir ${remoteDir}`);
+      } catch (_) {}
+    }
+  } finally {
+    client.close();
+  }
+}
+
 // ─── Live site check ──────────────────────────────────────────────────────────
 function checkLiveSite(url) {
   return new Promise(resolve => {
@@ -145,6 +201,9 @@ async function deploy() {
   console.log(`\nDeploy → ${SITE_URL}`);
   console.log(`  Unchanged (skip): ${skipped.length}`);
   console.log(`  To upload:        ${toUpload.length}`);
+
+  console.log('\nCleaning remote-only private/build files...');
+  await cleanupRemoteFiles(cache);
 
   if (toUpload.length === 0) {
     console.log('\nAll files up to date — nothing to upload.');

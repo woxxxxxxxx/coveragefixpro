@@ -2,7 +2,7 @@
 # 扫描日期: 2026-06-14
 # 扫描页面: 125
 
-## 1. canonical URL异常 [17个]
+## 1. canonical URL异常 [16个]
 auto/index.html => https://coveragefixpro.com/tools/auto/
 business/index.html => https://coveragefixpro.com/tools/business/
 health/index.html => https://coveragefixpro.com/tools/health/
@@ -14,7 +14,6 @@ life/group-vs-individual-life-insurance.html => https://www.coveragefixpro.com/t
 life/index.html => https://coveragefixpro.com/tools/life/
 life/life-insurance-conversion-calculator.html => https://www.coveragefixpro.com/tools/life/life-insurance-conversion-calculator.html
 life/life-insurance-medical-exam-waiver-calculator.html => https://www.coveragefixpro.com/tools/life/life-insurance-medical-exam-waiver-calculator.html
-life/life-insurance-needs-by-age.html => https://www.coveragefixpro.com/tools/life/life-insurance-needs-by-age.html
 life/life-insurance-settlement-calculator.html => https://www.coveragefixpro.com/tools/life/life-insurance-settlement-calculator.html
 life/life-insurance-tax-calculator.html => https://www.coveragefixpro.com/tools/life/life-insurance-tax-calculator.html
 life/premium-financing-calculator.html => https://www.coveragefixpro.com/tools/life/premium-financing-calculator.html
@@ -164,12 +163,8 @@ life/term-vs-whole-life-calculator.html
 ## 6. 缺少breadcrumb HTML [0个]
 无
 
-## 7. 缺少JS calc函数 [5个]
-auto/index.html
-business/index.html
-health/index.html
-home/index.html
-life/index.html
+## 7. 缺少JS calc函数 [0个]
+无
 
 ## 8. ad-placeholder未隐藏 [2个]
 business/index.html
