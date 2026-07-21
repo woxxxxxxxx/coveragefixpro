@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Estimate annual HSA contribution limits, employer deposits, catch-up contributions, eligible months, and family coverage planning.">
-<title>HSA Contribution Calculator 2026 | CoverageFixPro</title>
+<meta name="description" content="Calculate your 2026 HSA contribution limit after employer and personal deposits, eligible months and the age-55 catch-up. Uses official IRS limits.">
+<meta name="robots" content="index, follow">
+<title>2026 HSA Contribution Limit Calculator | CoverageFixPro</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XX4CE3YBR"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5XX4CE3YBR');</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/assets/css/tool-modules.css">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="HSA Contribution Limit & Tax Savings Calculator 2026">
-  <meta property="og:description" content="HSA Contribution Limit & Tax Savings Calculator 2026 - Free online insurance calculator.">
+  <meta property="og:title" content="2026 HSA Contribution Limit Calculator">
+  <meta property="og:description" content="Estimate how much more you can contribute after employer deposits, personal contributions, eligible months and catch-up eligibility.">
   <meta property="og:image" content="https://coveragefixpro.com/og-image.png">
   <meta property="og:url" content="https://coveragefixpro.com/tools/health/hsa-contribution-calculator.html">
   <link rel="canonical" href="https://coveragefixpro.com/tools/health/hsa-contribution-calculator.html">
@@ -20,9 +21,9 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "HSA Contribution Limit & Tax Savings Calculator 2026",
+  "name": "2026 HSA Contribution Limit Calculator",
   "url": "https://coveragefixpro.com/tools/health/hsa-contribution-calculator.html",
-  "description": "HSA Contribution Limit & Tax Savings Calculator 2026 - free online insurance calculator.",
+  "description": "Calculates a planning estimate of the 2026 HSA contribution limit using coverage type, eligible months, employer deposits, personal contributions and age-55 catch-up eligibility.",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Any",
   "isAccessibleForFree": true,
@@ -49,7 +50,7 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "HSA Contribution Limit & Tax Savings Calculator 2026",
+        "name": "2026 HSA Contribution Limit Calculator",
         "item": "https://coveragefixpro.com/tools/health/hsa-contribution-calculator.html"
       }
     ]
@@ -57,7 +58,15 @@
 }
   </script>
 <meta name="twitter:card" content="summary_large_image">
-<style>.portfolio-skip-link{position:fixed;left:12px;top:12px;z-index:10000;padding:.65rem .9rem;background:#111827;color:#fff;border-radius:4px;transform:translateY(-160%)}.portfolio-skip-link:focus{transform:none}</style>
+<style>
+.portfolio-skip-link{position:fixed;left:12px;top:12px;z-index:10000;padding:.65rem .9rem;background:#111827;color:#fff;border-radius:4px;transform:translateY(-160%)}.portfolio-skip-link:focus{transform:none}
+.tool-intro{max-width:760px;color:#475569;font-size:1.05rem;line-height:1.75;margin:-.35rem 0 1.5rem}
+.form-group small{display:block;color:#64748b;line-height:1.45;margin-top:.35rem}.checkbox-group{grid-column:1/-1;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:1rem}.checkbox-group label{display:flex;align-items:center;gap:.55rem}.checkbox-group input{width:1.1rem;height:1.1rem}
+.example-btn{border:1px solid #1d4ed8;background:#fff;color:#1d4ed8;border-radius:7px;padding:.7rem 1rem;font-weight:700;cursor:pointer}.example-btn:hover{background:#eff6ff}
+.result-item.highlight{border:2px solid #2563eb;background:#eff6ff}.result-note{margin:1rem 0 0;padding:.85rem 1rem;background:#f8fafc;border-left:4px solid #2563eb;color:#334155;line-height:1.6}.result-note.warning{background:#fff7ed;border-left-color:#ea580c;color:#9a3412}
+.source-card{margin-top:1rem;padding:1rem;background:#f8fafc;border:1px solid #cbd5e1;border-radius:8px;color:#334155}.source-card a{color:#1d4ed8;text-decoration:underline}
+@media(max-width:640px){.tool-intro{font-size:.98rem}.calculator-box{padding:1rem}.result-grid{grid-template-columns:1fr}.example-btn{width:100%}}
+</style>
 </head>
 <body>
 <a class="portfolio-skip-link" href="#main-content">Skip to main content</a>
@@ -68,7 +77,8 @@
 </div></header>
 <main id="main-content">
 <nav class="breadcrumb"><a href="/">Home</a> &gt; <a href="/tools/health/">Health Insurance</a> &gt; HSA Contribution Calculator</nav>
-<h1>HSA Contribution Limit & Tax Savings Calculator 2026</h1>
+<h1>2026 HSA Contribution Limit Calculator</h1>
+<p class="tool-intro">Estimate the maximum you may contribute for 2026 and how much room remains after employer and personal deposits. The calculator uses the official IRS limits of $4,400 for self-only coverage and $8,750 for family coverage.</p>
 <div class="calculator-box">
   <div class="form-group">
     <label for="coverage_type">Coverage Type</label>
@@ -78,12 +88,21 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="age">Your Age</label>
-    <input type="number" id="age" placeholder="45" oninput="calculate()">
+    <label for="age">Age at the end of 2026</label>
+    <input type="number" id="age" min="0" max="120" value="45" oninput="calculate()">
   </div>
   <div class="form-group">
-    <label for="employer_contribution">Employer HSA Contribution ($/year)</label>
-    <input type="number" id="employer_contribution" placeholder="500" oninput="calculate()">
+    <label for="eligible_months">HSA-eligible months in 2026</label>
+    <input type="number" id="eligible_months" min="1" max="12" value="12" oninput="calculate()">
+    <small>Count months when you were eligible on the first day of the month.</small>
+  </div>
+  <div class="form-group">
+    <label for="employer_contribution">Employer contribution for 2026 ($)</label>
+    <input type="number" id="employer_contribution" min="0" step="0.01" value="500" oninput="calculate()">
+  </div>
+  <div class="form-group">
+    <label for="personal_contribution">Your contributions already made ($)</label>
+    <input type="number" id="personal_contribution" min="0" step="0.01" value="0" oninput="calculate()">
   </div>
   <div class="form-group">
     <label for="tax_bracket">Federal Tax Bracket (%)</label>
@@ -95,29 +114,40 @@
       <option value="37">37%</option>
     </select>
   </div>
+  <div class="form-group checkbox-group">
+    <label><input type="checkbox" id="last_month_rule" onchange="calculate()"> Use the last-month rule</label>
+    <small>Only select this if you were eligible on December 1 and expect to remain eligible through the required testing period.</small>
+  </div>
+  <button type="button" class="example-btn" id="load-example">Load family example</button>
 </div>
 <div class="result-box" id="results" style="display:none">
-  <h2>Your HSA Savings Estimate</h2>
+  <h2>Your 2026 HSA Contribution Estimate</h2>
   <div class="result-grid">
-    <div class="result-item"><span class="label">2026 IRS Contribution Limit</span><span class="value" id="irs_limit"></span></div>
+    <div class="result-item"><span class="label">Annual IRS base limit</span><span class="value" id="irs_limit"></span></div>
+    <div class="result-item"><span class="label">Limit after eligible-month adjustment</span><span class="value" id="adjusted_limit"></span></div>
     <div class="result-item"><span class="label">Catch-Up Contribution (age 55+)</span><span class="value" id="catchup"></span></div>
-    <div class="result-item"><span class="label">Employer Contribution</span><span class="value" id="emp_contrib"></span></div>
-    <div class="result-item"><span class="label">Your Maximum Contribution</span><span class="value" id="max_contrib"></span></div>
-    <div class="result-item"><span class="label">Estimated Federal Tax Savings</span><span class="value" id="tax_savings"></span></div>
-    <div class="result-item"><span class="label">Effective Monthly Contribution</span><span class="value" id="monthly_contrib"></span></div>
+    <div class="result-item"><span class="label">Employer + personal deposits</span><span class="value" id="contributed"></span></div>
+    <div class="result-item highlight"><span class="label">Estimated remaining contribution room</span><span class="value" id="max_contrib"></span></div>
+    <div class="result-item"><span class="label">Estimated federal income tax reduction</span><span class="value" id="tax_savings"></span></div>
   </div>
+  <p id="result_note" class="result-note"></p>
 </div>
 <div class="description">
   <h2>About the HSA Contribution Calculator</h2>
-  <p>A Health Savings Account (HSA) is a powerful tax-advantaged tool for those enrolled in a High-Deductible Health Plan (HDHP). For 2026, the IRS contribution limits are $4,300 for self-only coverage and $8,550 for family coverage. If you are 55 or older, you can contribute an additional $1,000 catch-up contribution. HSA contributions are triple tax-advantaged: contributions reduce your taxable income, growth is tax-free, and withdrawals for qualified medical expenses are tax-free. This calculator helps you determine how much you can contribute after accounting for your employer's contribution, and estimates the federal income tax you will save. Contributing the maximum each year and investing your HSA balance can result in significant retirement healthcare savings, making the HSA one of the most efficient accounts available to eligible Americans.</p>
+  <p>The 2026 annual contribution limit is <strong>$4,400 for self-only coverage</strong> and <strong>$8,750 for family coverage</strong>. Employer contributions count toward the same limit. Eligible individuals age 55 or older by the end of the tax year may add a $1,000 catch-up contribution.</p>
+  <p>If you are eligible for only part of the year, the normal calculation is one-twelfth of the annual limit for each eligible month. The last-month rule can permit a full-year limit when you are eligible on December 1, but it includes a testing period. This calculator shows that option separately so it is not applied accidentally.</p>
+  <div class="source-card"><strong>Official source:</strong> IRS Revenue Procedure 2025-19 sets the 2026 limits and HDHP thresholds. Review <a href="https://www.irs.gov/irb/2025-21_IRB" rel="noopener" target="_blank">the IRS bulletin</a> and <a href="https://www.irs.gov/publications/p969" rel="noopener" target="_blank">Publication 969</a> before making a contribution.</div>
 </div>
 <div class="faq">
   <h2>Frequently Asked Questions</h2>
-  <details><summary>What qualifies as a High-Deductible Health Plan for HSA eligibility?</summary><p>For 2026, an HDHP must have a minimum deductible of $1,650 for self-only or $3,300 for family coverage, and maximum out-of-pocket limits of $8,300 for self-only or $16,600 for family coverage.</p></details>
+  <details><summary>What are the 2026 HSA contribution limits?</summary><p>The IRS limit is $4,400 for self-only HDHP coverage and $8,750 for family HDHP coverage. Employer deposits are included in these totals. Eligible people age 55 or older may add a $1,000 catch-up contribution.</p></details>
+  <details><summary>What qualifies as a High-Deductible Health Plan for HSA eligibility?</summary><p>For 2026, the general HDHP minimum deductible is $1,700 for self-only coverage or $3,400 for family coverage. The maximum out-of-pocket amount is $8,500 for self-only coverage or $17,000 for family coverage. Other eligibility rules and statutory exceptions can apply.</p></details>
+  <details><summary>Do employer contributions reduce how much I can contribute?</summary><p>Yes. Employer and employee contributions share the same annual limit. Enter both employer deposits and your own contributions so the calculator can estimate the remaining room.</p></details>
+  <details><summary>How do partial-year eligibility and the last-month rule work?</summary><p>Without the last-month rule, the annual limit is generally prorated by eligible months. The last-month rule may allow a full-year limit if you are eligible on December 1, but you must remain eligible during the testing period or additional tax consequences can apply.</p></details>
   <details><summary>Can I use HSA funds for non-medical expenses?</summary><p>Yes, but withdrawals for non-medical expenses before age 65 are subject to income tax plus a 20% penalty. After age 65, non-medical withdrawals are taxed as ordinary income (like a traditional IRA) with no penalty.</p></details>
-  <details><summary>Do HSA funds roll over year to year?</summary><p>Yes. Unlike Flexible Spending Accounts (FSAs), HSA funds never expire. Your balance rolls over indefinitely, and you can invest it once your balance exceeds a threshold set by your HSA provider.</p></details>
+  <details><summary>Do HSA funds roll over year to year?</summary><p>Yes. HSA balances generally carry forward. Investment availability and minimum cash-balance requirements depend on the account provider.</p></details>
   <details><summary>What happens to my HSA if I change to a non-HDHP?</summary><p>You keep your existing HSA balance and can continue to use it for qualified medical expenses tax-free. However, you cannot make new contributions until you are again enrolled in an HDHP.</p></details>
-  <details><summary>Are HSA contributions deductible even if I don't itemize?</summary><p>Yes. HSA contributions made directly (not through payroll) are an above-the-line deduction, meaning you can deduct them even if you take the standard deduction. Payroll contributions are excluded from income entirely.</p></details>
+  <details><summary>What does the tax-savings estimate include?</summary><p>It multiplies remaining contribution room by the selected federal income tax rate. It does not calculate state taxes, payroll-tax treatment, deductions already claimed, excess-contribution penalties or individual tax circumstances.</p></details>
 </div>
 <div class="related-tools">
   <h2>Related Health Insurance Tools</h2>
@@ -133,58 +163,87 @@
 
 <div class="tool-content-modules">
   <div class="tool-info-card">
-    <h2 class="tool-info-title">How to Use This Calculator</h2>
+    <h2 class="tool-info-title">How to Use the HSA Calculator</h2>
     <ol class="tool-steps">
-      <li><strong>Enter your details</strong> &mdash; Fill in the required fields above with your personal or policy information. The more accurate your inputs, the better your estimate.</li>
-      <li><strong>Review your results</strong> &mdash; Your estimate appears instantly as you complete the form. Check the breakdown to understand how each factor affects your numbers.</li>
-      <li><strong>Compare and take action</strong> &mdash; Use the results to compare options, discuss with your insurance agent, or make informed decisions about your coverage needs.</li>
+      <li><strong>Choose coverage</strong> &mdash; Select self-only or family coverage and enter your age at the end of 2026.</li>
+      <li><strong>Count eligible months</strong> &mdash; Include months when you were HSA eligible on the first day of the month.</li>
+      <li><strong>Enter all deposits</strong> &mdash; Add employer contributions and your own contributions already made for 2026.</li>
+      <li><strong>Review remaining room</strong> &mdash; Compare the result with account records before making another deposit.</li>
     </ol>
   </div>
   <div class="tool-info-card">
-    <h2 class="tool-info-title">Common Use Cases</h2>
+    <h2 class="tool-info-title">Checks Before Contributing</h2>
     <ul class="tool-use-cases">
-      <li><strong>Shopping for a new policy</strong> &mdash; Get a baseline estimate before requesting quotes from multiple insurers so you know what to expect and can negotiate effectively.</li>
-      <li><strong>Reviewing coverage at renewal</strong> &mdash; Compare your current costs against what this calculator suggests to identify potential savings or coverage gaps before your policy renews.</li>
-      <li><strong>Financial planning and budgeting</strong> &mdash; Factor insurance costs into your monthly budget or long-term financial plan with realistic estimates rather than guesswork.</li>
+      <li>Confirm that your plan and other coverage make you HSA eligible for each month counted.</li>
+      <li>Include deposits made by every employer and contributions made to all HSAs in your name.</li>
+      <li>Coordinate family contributions and separate catch-up contributions with a spouse when applicable.</li>
+      <li>Do not rely on the last-month rule without understanding its testing period.</li>
     </ul>
   </div>
 </div>
 </main>
 
   <section class="about-section" style="margin-top:32px;padding:24px;background:#f0f7ff;border-radius:10px;border:1px solid #dbeafe">
-    <h2>About This HSA Contribution Limit & Tax Savings Calculator 2026</h2>
-    <p>The <strong>HSA Contribution Limit & Tax Savings Calculator 2026</strong> helps you make smarter insurance decisions by turning complex coverage variables into clear, actionable numbers. Simply enter your details above and the calculator instantly shows you realistic estimates based on the key factors that insurers use to determine your costs.</p>
-    <p>Insurance professionals, financial planners, and consumers alike use health insurance calculators to benchmark costs, identify savings opportunities, and make informed coverage decisions. Rather than relying on guesswork or generic industry averages, this calculator applies the specific inputs you provide to generate a range that reflects your situation.</p>
-    <p>When interpreting results, keep in mind that actual health insurance premiums depend on many additional factors &mdash; including your credit history, exact location, prior claims, and the specific insurer's underwriting guidelines. The figures here represent a realistic estimate range, not a guaranteed quote. Use them as a starting point for conversations with licensed agents who can provide binding quotes from multiple carriers.</p>
-    <p>For the most accurate results, have your current policy documents nearby when entering inputs. Compare the output with at least two or three actual quotes to see how well the estimate aligns with real-world pricing in your market. Estimates can vary significantly by state and insurer, so shopping around remains the single most effective way to reduce your health insurance costs.</p>
+    <h2>Limits and assumptions</h2>
+    <p>This is a federal planning estimate, not tax advice. It assumes one coverage tier for the eligible months entered and does not model midyear changes between self-only and family coverage, married-spouse allocation rules, Medicare enrollment, inherited HSAs, qualified HSA funding distributions or correction of excess contributions.</p>
+    <p>The federal income tax estimate is illustrative and does not include state tax, payroll tax, investment growth or future withdrawals. Verify the final amount with Form 8889 instructions, your HSA custodian and a qualified tax professional.</p>
   </section>
 <footer><div class="footer-inner"><div class="footer-links"><a href="/about.html">About</a><a href="/about.html#privacy">Privacy Policy</a><a href="/about.html#terms">Terms</a>
       <a href="../../editorial-policy.html">Editorial Policy</a>
-    </div><p>© 2026 CoverageFixPro. All rights reserved.</p><p>Results are estimates only. Consult a licensed insurance professional for actual quotes.</p></div>
+    </div><p>&copy; 2026 CoverageFixPro. All rights reserved.</p><p>Results are planning estimates only. Verify tax and eligibility details before contributing.</p></div>
 </footer>
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8679;</button>
 <script src="/js/main.js"></script>
 <script>
 function fmt(n){return '$'+n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,',');}
+function clamp(n,min,max){return Math.min(max,Math.max(min,n));}
 function calculate(){
   const type=document.getElementById('coverage_type').value;
-  const age=parseInt(document.getElementById('age').value)||0;
-  const emp=parseFloat(document.getElementById('employer_contribution').value)||0;
+  const age=clamp(parseInt(document.getElementById('age').value)||0,0,120);
+  const months=clamp(parseInt(document.getElementById('eligible_months').value)||1,1,12);
+  const useLastMonth=document.getElementById('last_month_rule').checked;
+  const emp=Math.max(0,parseFloat(document.getElementById('employer_contribution').value)||0);
+  const personal=Math.max(0,parseFloat(document.getElementById('personal_contribution').value)||0);
   const bracket=parseInt(document.getElementById('tax_bracket').value);
-  const base_limit=type==='self'?4300:8550;
+  const base_limit=type==='self'?4400:8750;
   const catchup=age>=55?1000:0;
-  const total_limit=base_limit+catchup;
-  const your_max=Math.max(0,total_limit-emp);
+  const annual_limit=base_limit+catchup;
+  const adjusted_limit=useLastMonth?annual_limit:annual_limit*(months/12);
+  const contributed=emp+personal;
+  const your_max=Math.max(0,adjusted_limit-contributed);
   const tax_savings=your_max*(bracket/100);
   document.getElementById('irs_limit').textContent=fmt(base_limit);
-  document.getElementById('catchup').textContent=catchup>0?fmt(catchup):'Not applicable';
-  document.getElementById('emp_contrib').textContent=fmt(emp);
+  document.getElementById('adjusted_limit').textContent=fmt(adjusted_limit);
+  document.getElementById('catchup').textContent=catchup>0?fmt(useLastMonth?catchup:catchup*(months/12)):'Not applicable';
+  document.getElementById('contributed').textContent=fmt(contributed);
   document.getElementById('max_contrib').textContent=fmt(your_max);
   document.getElementById('tax_savings').textContent=fmt(tax_savings);
-  document.getElementById('monthly_contrib').textContent=fmt(your_max/12);
+  const note=document.getElementById('result_note');
+  if(contributed>adjusted_limit){
+    note.className='result-note warning';
+    note.textContent='Entered deposits exceed this estimated limit by '+fmt(contributed-adjusted_limit)+'. Stop before contributing more and review correction rules with your HSA custodian or tax professional.';
+  }else if(useLastMonth){
+    note.className='result-note warning';
+    note.textContent='This result uses the last-month rule. Confirm December 1 eligibility and the testing-period requirement before relying on the full-year limit.';
+  }else{
+    note.className='result-note';
+    note.textContent='Planning estimate based on '+months+' eligible month'+(months===1?'':'s')+'. Employer contributions and your own deposits both count toward the limit.';
+  }
   document.getElementById('results').style.display='block';
 }
 calculate();
+
+document.getElementById('load-example').addEventListener('click',function(){
+  document.getElementById('coverage_type').value='family';
+  document.getElementById('age').value='57';
+  document.getElementById('eligible_months').value='12';
+  document.getElementById('employer_contribution').value='1500';
+  document.getElementById('personal_contribution').value='3000';
+  document.getElementById('tax_bracket').value='24';
+  document.getElementById('last_month_rule').checked=false;
+  calculate();
+  if(typeof gtag==='function')gtag('event','hsa_example_loaded');
+});
 
 window.addEventListener('scroll',function(){var b=document.getElementById('btt');if(b)b.classList.toggle('show',window.scrollY>300);});
 </script>
